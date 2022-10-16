@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.cdnfonts.com/css/american-horror-story" rel="stylesheet">
+    <link rel="stylesheet" href="./public/style.css">
+    <title>API | Asylum</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to Asylum</h1>
+    </header>
+    <div class="container">
+        <div class="about">
+            <p>Asylum foi o sub título da segunda temporada de American Horror Story, dessa vez com uma nova história que foi para o ar no dia 17 de Outubro de 2012 pelo o canal Fx (Estados Unidos) a rede de televisão que produz a série.<br>
+            Enredo Nessa temporada apresenta uma história que se passa no maior vilão Briarcliff uma hospital psquiatro na zona leste norte-americano, o mesmo é propriedade da Igreja Católica então essa história será de muita fé e ciências. </p>
+        </div>
+        <div class="caracters-title">
+            
+            <h2>Caracters</h2>
+        </div>
+        <% for(let caracter of result){%>
+            <div class="card" style="width: 18rem;">
+                <img src="<%= caracter.image %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3><b>Name: </b><%= caracter.name %></h3>
+                    <p><b>intérprete: </b><%= caracter.intérprete %></p>
+                </div>
+            </div>
+        <% } %>
+    </div>      
+    
+    <audio autoplay="autoplay" loop>
+        <source src=".\public\Dominique.mp3" type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+</body>
+</html>
