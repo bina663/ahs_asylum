@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const bodyParser = require("body-parser");
 const path = require("path")
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 8080;
 const app = express();
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
