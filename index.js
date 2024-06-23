@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, '/pages'));
 
 
 app.get('/', async (req, res) => {
-    const response = await axios.get("https://api-ahs-asylum.onrender.com/caractersAsylum")
+    const response = await axios.get("https://api-ahs.vercel.app/caractersAsylum")
     let app = await response.data;
     res.render("index",{result:app})
 });
